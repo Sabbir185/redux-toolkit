@@ -1,1 +1,1 @@
-Curry function
+currying function in JavaScript 
