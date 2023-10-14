@@ -1,6 +1,7 @@
 const store = require('./redux/store');
 const {counterActions} = require('./redux/features/counter/counterSlice');
 const {dynamicCounterActions} = require('./redux/features/dynamicCounter/dynamicCounterSlice');
+const {fetchPosts} = require('./redux/features/post/postSlice');
 
 // initialState
 // console.log(`initialState : ${JSON.stringify(store.getState())}`);
@@ -21,3 +22,7 @@ store.dispatch(counterActions.increment());
 // store.dispatch(dynamicCounterActions.increment(2));
 // store.dispatch(dynamicCounterActions.increment(3));
 // store.dispatch(dynamicCounterActions.decrement(2));
+
+
+// async redux thunk
+store.dispatch(fetchPosts());
